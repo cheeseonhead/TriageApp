@@ -1,0 +1,23 @@
+Status meeting Monday. 2014/11/17
+
+Sandi - PatientPool
+- Implemented basic sorting of PatientPool by descending urgency
+- Plans to test PatientPool sorting
+- Had some difficulty with converting between various container types
+
+Ishwant - PatientPool
+- Implemented the removal of all Patients who have been seen by a doctor
+  (-1 urgency) from the PatientPool using iterators
+- Plans to test PatientPool(updated) sorting
+
+Jeff - UserPool/Prescriptions
+- Decided that we would create a UserPool in order to add users
+  from file and to set the current user of the app
+- Plans to implement prescriptions for Patients and finalize
+  UserPool implementation
+
+Josh - User
+- Implemented the User class to be used in UserPool
+- Tested User class
+- Plans to implement any required activities to
+  interface with some of the newly created backend code

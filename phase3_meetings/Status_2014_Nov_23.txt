@@ -1,0 +1,21 @@
+Status meeting Sun. 2014/11/23
+
+Ishwant - Android Activities
+- Finalized / removed bugs from CreateVisitActivitiy
+- Plans to review/clean up code prior to phase III deadline
+
+Sandi - Testing
+- Tested PatientPool.getSortedPatients(),
+  Visit.calculateUrgency() and other smaller methods
+- Plans to review/clean up code prior to phase III deadline
+
+Josh - Create Patient / Android Activities
+- Implemented PatientPool.createPatient() and
+  worked on the associated CreatePatientActivity
+- Plans to review/clean up code prior to phase III deadline
+
+Jeff - Android Activities
+- Finalized CreatePatientActivity
+- Implemented/tested doctorVisits and its
+  associated methods
+- Plans to review/clean up code prior to phase III deadline

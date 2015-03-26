@@ -1,0 +1,40 @@
+<xml doctype>
+
+
+<Visits>
+	<TotalVisits>3</TotalVisits>
+	<Visit>
+		<id>12</id>
+		<PatientHCN>1000</PatientHCN>
+		<VitalHistory>
+			<Vital>
+				<Temperature>20.0</Temperature>
+				<BloodPressure>40,60</BloodPressure>
+				<Heartrate>20</Heartrate>
+				<TimeStamp>1995-04-28 03:52:59</TimeStamp>
+			</Vital>
+		</VitalHistory>
+		<ArrivalTime>1995-04-28 03:53:25</ArrivalTime>
+	</Visit>
+	
+	
+	<Visit>
+		<id>13</id>
+		<PatientHCN>10010</PatientHCN>
+		<VitalHistory>
+			<Vital>
+				<Temperature>20.0</Temperature>
+				<BloodPressure>40,60</BloodPressure>
+				<Heartrate>20</Heartrate>
+				<TimeStamp>1995-04-28 03:52:59</TimeStamp>
+			</Vital>
+			<Vital>
+				<Temperature>22.0</Temperature>
+				<BloodPressure>42,62</BloodPressure>
+				<Heartrate>22</Heartrate>
+				<TimeStamp>1995-04-28 05:52:59</TimeStamp>
+			</Vital>		
+		</VitalHistory>
+		<ArrivalTime>1995-04-28 03:53:25</ArrivalTime>
+	</Visit>
+</Visits>

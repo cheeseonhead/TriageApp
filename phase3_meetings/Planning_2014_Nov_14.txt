@@ -1,0 +1,18 @@
+Planning meeting Friday. 2014/11/14
+Current state of the project:
+	- All phase II features/requirements met
+    	- Android GUI integrated with backend
+	  code
+
+Tasks for this week:
+    - Figure out how to differentiate between nurse/physician user
+      and restrict access to certain functionality (adding prescriptions/
+      versus creating new patient records) [Everyone]
+    - Add any missing javadocs and test cases [Josh]
+    - Debug CreateVisitActivity / Create new Exception classes
+      to replace generic Exceptions throughout the code base [Josh]
+    - Implement the recording of prescriptions/prescription information
+      for a Patient (Jeff)
+    - Implement sorting of PatientPool by decreasing urgency (Ishwant, Sandi)
+
+Next meeting date: Thursday. 2014/11/20

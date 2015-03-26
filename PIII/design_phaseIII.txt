@@ -1,0 +1,29 @@
+	We used a vast hierarchy of classes in order to create a flexible application which follow the basic design principles. Overall we have four main classes: FileManager,  PatientPool, VisitPool and UserPool, each of which uses numerous other classes for the different data it needs to track. 
+	
+ 	Firstly the FileManager class is used to save and load all data. The passwords.txt is used to maintain the UserPool, patients.txt creates the PatientPool and we then use an XML database to provide PatientPool and VisitPool with the rest of their data. The XML database contains every Visit (and it's relevant information) in a tree structure. We chose this method because it allows us to easily traverse and re-populate our database whilst maintaining the relationships between different collections. 7
+	
+	PatientPool is a collection of all patients in the database which we chose to respresent as a TreeMap of Patient objects. A TreeMap was chosen because the tree structure allows us to easily store Patient objects, with their HealthCardNumber as their key, for easy and efficient storage and retrieval. The Patient class contains all the personal information of the patient, a VitalHistory class and a short integer for the Urgency which is updated whenever the vital signs change:
+	
+For the personal information we gave each one their own class in order to build a more robust and flexible structure that allowed us to connect some of the classes easily and verify their entries are parsed and inputted correctly. HealthCardNumber contains a integer value HCN, Name contains two Strings for first and last name, and BirthDate uses a Calendar to store birthday.
+
+The VitalHistory class is used to track all of a patient's vital updates and extends our basic History class (which we also used for VisitHistory). The History class extends an ArrayList and was chosen mainly because it is easy to track entries and automatically expands as a new Vital object is added.
+
+The Vital class contains all vital signs (Temperature, HeartRate and BloodPressure) which are stored in their own classes, along with a TimeStamp class which tracks the time of each update. HeartRate contains an integer, BloodPressure contains two integers, Systolic and Diastolic, and Temperature contains a float point value. We used seperate classes with their own methods to verify their values are within the desired ranges, and we created unique Exception classes that are thrown if that's not the case.
+
+	VisitPool is a collection of all visits in the database which we again chose to respresent as a TreeMap of Visit objects. The HealthCardNumber (as in int) are the keys and each Visit the values. The Visits contain: a history of vital information, arrival date, patient it belongs to, a unique id, prescription information and a record of doctor visits. This allows us to save and load the XML database easily and also access certain information simpler because it is not just accessed one way in it's functions:
+	
+Similar to previous use, the VitalHistory class tracks any Vital updates for this specific Visit allowing nurses to re-measure vital signs.
+
+The arrival date is again a TimeStamp class.
+
+The Patient is a reference to the object associated with this Visit. Note: In the XML database we simply save the HealthCardNumber.
+
+The unique ID for the visit takes the form of an integer. This is only used to populate the VisitPool each time the app is loaded.
+
+Prescription is simply a string that gets passed on to any newer Visits if there is no update.
+
+DoctorVisits is an ArrayList of TimeStamps for each visit. This is not it's own class because there is no other information that we need to record, simply when they occur.
+
+	Finally the UserPool contains all information about Users along with a static variable for the current user. Again a TreeMap was used. The User class simply contains Strings for the name, password and user type. We did not create classes because the information is only used to log on at which point the user type is tracked to show different options. 
+
+

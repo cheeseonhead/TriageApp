@@ -1,0 +1,24 @@
+Planning meeting Sun. 2014/11/02
+
+Ishwant - Vital, Temperature, HeartRate
+- Completed basic implementation of Vital, Temperate and HeartRate class
+- Plans to test PatientPool and Visit
+- Had to decide how to correlate inputs and handle exceptions with other classes
+
+Sandy - PatientPool
+- Completed basic implementation of PatientPool class
+- Plans to test HCN, Name and Birthdate
+- Had to adjust to static methods to work with other classes
+
+Jeff - Patient, HCN, Name, Birthdate
+- Completed basic implementation of Patient, HCN, Name, Birthdate classes
+- Plans to create a TimeStamp and History Classes
+- Decided it may be easier to have a TimeStamp class, had to configure how the date would be parsed in other functions
+
+Josh - Visit
+- Completed Visit implementation
+- Plans to create VisitHistory class and carry out JavaTesting on  Vital/Temperature/HeartRate
+
+What he has accomplished
+What he plans to do 
+Any problems

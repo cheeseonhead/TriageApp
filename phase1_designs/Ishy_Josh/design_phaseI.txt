@@ -1,0 +1,21 @@
+﻿The design we have put together consists of two classes, one of which is a PatientPool, and the other is the Patient object itself. The nurse will have access to the methods of the PatientPool class, which in turn accesses the Patient class. We have chosen this approach because it offers the easiest way to keep track, access, and individually update all of the patients. When a patient arrives the nurse will easily be able to create a Patient object by filling out the required fields, and then update any patient after changes to vital signs, symptoms or doctor visits. Any time a patient is updated an urgency variable attached to the Patient object will be updated.
+
+
+The patient class will have one method which will be adjust the urgency - this updates whenever the vitals are updated. There will be four private variables, each with applicable getters/setters:
+* personalInformation: Array (String: Name, int: DOB, int: Healthcard Number, String: arrival time). DOB is stored as int because it would easier to parse than a string and the arrival time will be a string because here it is simply for display (since we save the arrival order in the PatientPool array).
+* symptoms: Array of Strings. Each new entry will be added to the array.
+* vitalSigns: Array (double: Temp, array of two ints: Blood Pressure, int: Heart Rate)
+* doctorVisit: Array (boolean: beenVisited, String: Date)
+* urgency: Array of ints. 
+
+
+The PatientPool will have an array of each patient, stored as a tuple with their health card number and a reference to the Patient object. This will allow the different methods to easily access different patients by looking up the health card number, and shall keep track of the order in which patients arrive (hence we did not use a map). The methods we will use:
+* createPatient: Takes an array of personalInformation, symptoms and vitalSigns to create a Patient object, and append to the PatientPool array.
+* updatePatient: Takes the Patient object along with the nurse’s input and adds to relevant array. There will be individual methods for symptoms, vitalSigns and doctorVisit which call the main update method.
+* getPatient: This will take a health card number and return the patient object 
+* getUnvisitedPatients: Returns a subset of the patient pool array removing visited patients and retaining the order.
+   * sortByArrivalTime: Returns getUnvisitedPatients()
+   * sortByUrgency: Returns getUnvisitedPatients() sorted by the urgency variable attached to the Patient objects
+
+
+Note In order to load patient data we will need the GUI to interact with, and likely contain a method which will have access to, a specific PatientPool object. The GUI will also interpret the getUrgency() array to determine whether the patient is getting better or not. As well, we have decided to make all of the variables associated with the Patient class private, and implement getters and setters where applicable. Finally, for permanent storage, we will write all the data for each Patient to a text file, where each line corresponds to a specified variable (e.g. personalInfo stored on line 1).

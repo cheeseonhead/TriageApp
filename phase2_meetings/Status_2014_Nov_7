@@ -1,0 +1,24 @@
+Status Meeting Fri. 2014/11/17
+
+Ishwant 
+- Created InvalidInputException and adjusted all classes, created test cases for PatientPool and Visit
+- Configure VisitActivity
+- No issues
+
+Sandy
+- Added missing java doc and test cases
+- Configure VitalActivity
+- 
+
+Jeff
+- Completed TimeStamp and History class
+- Configure Main Activity
+- Had issues for LoadPatient and LoadXML
+
+Josh
+- Completed VisitHistory class and created test cases for Vital, Temperate and HeartRate
+- Configure PatientActivity 
+- Had issues for ListView adaptor
+
+
+

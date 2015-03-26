@@ -1,0 +1,84 @@
+Planning meeting Friday. 2014/11/14
+Current state of the project:
+	- All phase II features/requirements met
+    	- Android GUI integrated with backend
+	  code
+
+Tasks for this week:
+    - Figure out how to differentiate between nurse/physician user
+      and restrict access to certain functionality (adding prescriptions/
+      versus creating new patient records) [Everyone]
+    - Add any missing javadocs and test cases [Josh]
+    - Debug CreateVisitActivity / Create new Exception classes
+      to replace generic Exceptions throughout the code base [Josh]
+    - Implement the recording of prescriptions/prescription information
+      for a Patient (Jeff)
+    - Implement sorting of PatientPool by decreasing urgency (Ishwant, Sandi)
+
+Next meeting date: Thursday. 2014/11/20
+
+Status meeting Monday. 2014/11/17
+
+Sandi - PatientPool
+- Implemented basic sorting of PatientPool by descending urgency
+- Plans to test PatientPool sorting
+- Had some difficulty with converting between various container types
+
+Ishwant - PatientPool
+- Implemented the removal of all Patients who have been seen by a doctor
+  (-1 urgency) from the PatientPool using iterators
+- Plans to test PatientPool(updated) sorting
+
+Jeff - UserPool/Prescriptions
+- Decided that we would create a UserPool in order to add users
+  from file and to set the current user of the app
+- Plans to implement prescriptions for Patients and finalize
+  UserPool implementation
+
+Josh - User
+- Implemented the User class to be used in UserPool
+- Tested User class
+- Plans to implement any required activities to
+  interface with some of the newly created backend code
+
+
+Planning meeting Thursday. 2014/11/20
+Current state of the project:
+	- Majority of requirements for phase III completed
+    	- UserPool/User, Prescriptions, Sorting by urgency etc..
+	  fully implemented
+
+Tasks for this week:
+    - Implement Nurses creating new Patient records and
+      create PatientsByUrgencyActivity to handle front-end
+      of Patient sorting [Josh]
+    - Clean up existing code base (javadocs/comments/remove
+      unused code/etc..) [Everyone]
+    - Testing PatientPool/Visit methods
+    - Finalize functionality of remaining Android Activities
+      [Jeff, Ishwant]
+    - Implement the tracking of Patients visited by doctor [Jeff]
+
+Next meeting date: --
+
+Status meeting Sun. 2014/11/23
+
+Ishwant - Android Activities
+- Finalized / removed bugs from CreateVisitActivitiy
+- Plans to review/clean up code prior to phase III deadline
+
+Sandi - Testing
+- Tested PatientPool.getSortedPatients(),
+  Visit.calculateUrgency() and other smaller methods
+- Plans to review/clean up code prior to phase III deadline
+
+Josh - Create Patient / Android Activities
+- Implemented PatientPool.createPatient() and
+  worked on the associated CreatePatientActivity
+- Plans to review/clean up code prior to phase III deadline
+
+Jeff - Android Activities
+- Finalized CreatePatientActivity
+- Implemented/tested doctorVisits and its
+  associated methods
+- Plans to review/clean up code prior to phase III deadline

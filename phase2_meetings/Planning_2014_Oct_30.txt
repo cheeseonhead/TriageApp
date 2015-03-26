@@ -1,0 +1,14 @@
+Planning meeting Thur. 30/10/14
+Current state of the project:
+	- Currently have a combination of both CRC models
+	- Expanded list of classes and functions
+
+Tasks for this week:
+	- Implement PatientPool (Sandi)
+	- Implement Patient (Jeff)
+	- Implement HealthCardNumber (Jeff)
+	- Implement Name (Jeff)
+	- Implement Birthdate (Jeff)
+	- Implement Visit (Josh)
+	- Implement Vital (Ishwant)
+Next planning meeting date: Wed. 2014/11/05

@@ -1,0 +1,18 @@
+Planning meeting Thursday. 2014/11/20
+Current state of the project:
+	- Majority of requirements for phase III completed
+    	- UserPool/User, Prescriptions, Sorting by urgency etc..
+	  fully implemented
+
+Tasks for this week:
+    - Implement Nurses creating new Patient records and
+      create PatientsByUrgencyActivity to handle front-end
+      of Patient sorting [Josh]
+    - Clean up existing code base (javadocs/comments/remove
+      unused code/etc..) [Everyone]
+    - Testing PatientPool/Visit methods
+    - Finalize functionality of remaining Android Activities
+      [Jeff, Ishwant]
+    - Implement the tracking of Patients visited by doctor [Jeff]
+
+Next meeting date: --

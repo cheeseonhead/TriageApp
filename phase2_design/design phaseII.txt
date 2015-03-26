@@ -1,0 +1,25 @@
+- Data storage is now in XML form.
+
+- The FileManager class takes care of loading the patients from patient_records.txt file given, and loads the associated Visits from the XML file. It's doing so by populating the PatientPool and VisitPool.
+
+- The above action is initiated by a press of a button by the user, not done automatically when the app loads.
+
+- The PatientPool and VisitPool are the main information center in this app, they contain all the Patients and Visits. All the patient and visit access are done through methods of these two classes.
+
+- Our approach in designing is to create an object for everything we need, including everything from Patients to Timestamp. The hiearchy is explained below.
+
+- PatientPool contains a list of Patients, which it uses a map to store, with health card numbers as keys.
+
+- Patient objects have patient information as well as a list of his/her visits. The classes associated with it are Name, HealthCardNumber, Birthdate, and VisitHistory.
+
+- Name is straightforward, it has a private string and a validate method. A HealthCardNumber has a private int and also has validation. Same with Birthdate, though it uses Calendar to store the information. All above three classes throw exceptions when the value is invalid, more details in the javadoc.
+
+- VisitHistory is a subclass of abstract class History. History extends ArrayList. The primary purpose of History is to have a method to give us the stored objects in reverse order, in this case, newest first. This class is also extended by VitalHistory.
+
+- So VisitHistory and VitalHistory both have an add method which can add the appropriate objects, Visit for the former, and Vital for latter.
+
+- In Visit, several things are stored, not all implemented yet, i.e. Symptom is not. The ones implemented are arrival time, vital history, and patient. They are all created upon construction, and are all public variables.
+
+- Vital history is stored wth VitalHistory as mentioned above, and Patient just points to the corresponding Patient object. As for arrival time, we wroted Timestamp class to use. Timestamp is a small class, and the main method is toString() which prints it the way we like.
+
+- So each vital is stored in a Vital object, which includes the timestamp, bloodpressure (both), temperature, and heartrate. As I said before, they all have their own classes with validation methods.

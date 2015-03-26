@@ -1,0 +1,14 @@
+Planning meeting Wed. 2014/11/05
+Current state of the project:
+	- classes almost implemented
+    	- (finished implementation by end of meeting)
+    	- CRCs fully(?) updated as per Phase I
+
+Tasks for this week:
+    - design and implement android GUI (everyone)
+        -- figure out how to load resources (Jeff)
+    - add any missing javadocs and test cases (Josh, Sandi, & Ishwant)
+    - add TimeStamp class, and modify classes which use timeStamps (Jeff)
+    - Create new Exception class and implement useage across project (Ishwant)
+
+Next meeting date: Fri. 2014/11/07

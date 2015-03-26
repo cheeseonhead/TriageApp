@@ -1,0 +1,28 @@
+- When App launches, it creates VisitRecordDB and PatientDB then loads visitRecord.csv and patient.csv, and passes all these to FileManager for initializing.
+
+- The FileManager class initializes VisitRecordDB from visitRecord.csv and initializes PatientDB from patient.csv.
+
+- For patient.csv each line is a patient record, each field is separated by a comma, with no spaces next to the commas.
+	- First field is the health card number, all numerical
+	- Second field is patient's first name, which is a string with no commas.
+	- Third field is patient's middle name, which is a string with no commas.
+	- Fourth field is patient's family name, which is a string with no commas.
+	- Fifth field is patient's birthdate, formatted YYYYMMDD, where YYYY is the year, MM is the month, and DD is the day.
+
+- For visitRecord.csv each line is a visit record, each field is separated by a comma, with no spaces next to the commas.
+	- First field is the health card number, which is a string of integers.
+	- Second field is the patient's arrival time, which is formatted as YYYYMMDDHHMMSS, where YYYY is the year, MM is the month, DD is the day, HH is the hour in 24 hour format, MM is the minute, SS is the second, and all digits are numerals.
+	- Third field is the vital history, starting with the newest one. Each entry is contained within square brackets, and the five values are ordered by temperature, blood pressure systolic, blood pressure diastolic, heart rate, then timestamp; all separated by slashes. (i.e. "[36.5/140/90/100/19950719235944][36.7/132/99/96/19950719235211]")
+	- Fourth field is the symptoms history, starting with the newest one. Each entry is contained within square brackets, and the two values are ordered by description then timestamp; all separated by slashes. (i.e. "[Still dying and screaming/19950719235944][Dying and screaming/19950719235211]")
+
+- The VisitRecordDB stores all the VisitRecord and the VisitRecord(s) in HashMap with VisitID as keys and VisitRecord as values. VisitRecord(s) can be sorted and searched, then accessed. It also keeps track of the total amount of records in this database. It can also create a new VisitRecord given health card number and VisitRecord all other VisitRecord info. If it's a new Patient, then it will be created.
+
+- The PatientDB stores all the Patient(s) and the Patiens(s) in HashMap with health card number as keys and Patient as values. Patient(s) can be sorted and searched, then accessed. It can also create a new Patient.
+
+- A VisitRecord stores the Patient it's associated with, the arrival time, Vital history in an ArrayList starting with the newest, and Symptom history the same way. It also can report its urgency, calculated from the hospital policy. It will be able to add or edit a new Vital or Symptom entry anytime.
+
+- A Vital object stores the five information menioned above, with getters and setters.
+
+- A Symptom object stores the description and timestamp, with getters and setters.
+
+- A Patient object stores the personal information of that patient, everything except for health card number is editible.

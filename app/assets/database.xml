@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Visits total="2">
+    <Visit>
+        <ID>0</ID>
+        <HCN>111111</HCN>
+        <ArrivalTime>2000-05-17 15:32:59</ArrivalTime>
+        <VitalHistory>
+            <Vital>
+                <Temperature>32.0</Temperature>
+                <BloodPressure>40,60</BloodPressure>
+                <Heartrate>70</Heartrate>
+                <TimeStamp>2000-05-17 15:32:59</TimeStamp>
+            </Vital>
+            <Vital>
+                <Temperature>30.0</Temperature>
+                <BloodPressure>30,30</BloodPressure>
+                <Heartrate>100</Heartrate>
+                <TimeStamp>2000-05-17 15:35:24</TimeStamp>
+            </Vital>
+        </VitalHistory>
+    </Visit>
+    <Visit>
+        <ID>1</ID>
+        <HCN>111111</HCN>
+        <ArrivalTime>2000-05-17 15:33:02</ArrivalTime>
+        <VitalHistory>
+            <Vital>
+                <Temperature>32.0</Temperature>
+                <BloodPressure>50,70</BloodPressure>
+                <Heartrate>80</Heartrate>
+                <TimeStamp>2000-05-17 15:33:02</TimeStamp>
+            </Vital>
+        </VitalHistory>
+    </Visit>
+    <Visit>
+        <ID>2</ID>
+        <HCN>111111</HCN>
+        <ArrivalTime>2000-05-17 15:33:02</ArrivalTime>
+        <VitalHistory>
+            <Vital>
+                <Temperature>32.0</Temperature>
+                <BloodPressure>50,70</BloodPressure>
+                <Heartrate>80</Heartrate>
+                <TimeStamp>2000-05-17 15:33:02</TimeStamp>
+            </Vital>
+        </VitalHistory>
+    </Visit>
+</Visits>
